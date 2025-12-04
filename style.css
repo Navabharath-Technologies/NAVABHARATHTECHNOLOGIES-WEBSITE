@@ -711,6 +711,21 @@ footer {
         padding: 6px 12px;
     }
 
+    /* On tablet/mobile, avoid highlighting the whole header when search is focused.
+       Only highlight the search button itself. */
+    .search-container:focus-within {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .search-btn:focus,
+    .search-btn:active {
+        outline: none;
+        background: rgba(26, 60, 135, 0.12);
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(26,60,135,0.08);
+    }
+
     /* Mobile-friendly font sizing and tighter layout for tablets */
     body {
         font-size: 15px;
