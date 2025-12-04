@@ -674,6 +674,9 @@ footer {
         position: relative;
         gap: 12px;
         padding: 0 8px;
+        /* allow wrapping so logo and controls stack cleanly */
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .logo img {
@@ -824,6 +827,33 @@ footer {
         text-align: center;
     }
 
+    /* Stack hero content with image below text on tablets */
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hero-content {
+        order: 1;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .hero-image {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .movable-image {
+        width: 100%;
+        max-width: 420px;
+        max-height: 260px;
+        margin: 0 auto;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
     }
@@ -882,6 +912,19 @@ footer {
         height: 52px;
         max-width: 120px;
         transform: none;
+    }
+
+    /* Disable heavy animations on small phones to save CPU/battery */
+    .movable-image {
+        animation: none;
+        max-height: 200px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Compact the search: show only icons on very small screens */
+    .search-input {
+        display: none;
     }
 
     /* Extra compact styles for small phones */
@@ -945,6 +988,57 @@ footer {
     .hero {
         padding: 28px 0;
         min-height: 50vh;
+    }
+
+    /* Ensure hero content and image fit small screens */
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 0 6px;
+    }
+
+    .hero-content {
+        width: 100%;
+        text-align: center;
+        padding: 0 6px;
+    }
+
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img,
+    .movable-image {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        max-height: 220px;
+        border-radius: 14px;
+    }
+
+    /* Make primary CTA full-width and easy to tap */
+    .btn-primary {
+        width: 100%;
+        padding: 14px 16px;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+
+    /* Header compact layout: logo left, controls right */
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 6px 12px;
+    }
+
+    /* Reduce nav link sizes to avoid wrapping */
+    nav a {
+        font-size: 0.95rem;
     }
 
     .hero-content h1 {
