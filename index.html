@@ -7,7 +7,8 @@
 
     <!-- SEO Meta Tags -->
     <title>Navabharath Technologies | IT Solutions, Web Development, AI, Digital Marketing</title>
-    <meta name="description" content="Navabharath Technologies provides web development, mobile app development, AI solutions, IVR systems, UI/UX design, and digital marketing services. We deliver intelligent, scalable, and future-ready technology solutions for businesses.">
+    <meta name="description"
+        content="Navabharath Technologies provides web development, mobile app development, AI solutions, IVR systems, UI/UX design, and digital marketing services. We deliver intelligent, scalable, and future-ready technology solutions for businesses.">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="notification.css">
@@ -17,10 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 
     <!-- Favicons -->
-    <link rel="icon" href="assets/favicon.png" sizes="512x512" type="image/png">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.png" type="image/png" sizes="512x512">
     <link rel="apple-touch-icon" href="assets/favicon.png">
-
     <meta name="theme-color" content="#1a3c87">
+
+
 </head>
 
 <body>
@@ -39,6 +42,7 @@
                         <li><a href="#home" data-translate="nav_home">Home</a></li>
                         <li><a href="#about" data-translate="nav_about">About Us</a></li>
                         <li><a href="#services" data-translate="nav_services">Services</a></li>
+                        <li><a href="resources.html" data-translate="nav_resources">Resources</a></li>
                         <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -56,11 +60,13 @@
                         <div class="lang-option" data-lang="it">Italian</div>
                         <div class="lang-option" data-lang="pt">Portuguese</div>
                         <div class="lang-option" data-lang="ar">Arabic</div>
+                        <div class="lang-option" data-lang="kn">Kannada</div>
                     </div>
                 </div>
             </div>
             <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search..."
+                    data-translate="search_placeholder">
                 <button class="search-btn" id="searchBtn" aria-label="Search">
                     <i class="fas fa-search"></i>
                 </button>
@@ -76,16 +82,44 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-floating-bg">
+            <span class="floating-text t1">AI</span>
+            <span class="floating-text t2">Cloud</span>
+            <span class="floating-text t3">Secure</span>
+            <span class="floating-text t4">SaaS</span>
+            <span class="floating-text t5">DevOps</span>
+            <span class="floating-text t6">Web</span>
+
+            <!-- Floating Icons -->
+            <i class="fas fa-lightbulb floating-icon i1"></i>
+            <i class="fas fa-question-circle floating-icon i2"></i>
+            <i class="fas fa-cogs floating-icon i3"></i>
+            <i class="fas fa-rocket floating-icon i4"></i>
+            <i class="fas fa-shield-alt floating-icon i5"></i>
+        </div>
+
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 data-translate="hero_title">Smarter Solutions for Better Future</h1>
-                <p data-translate="hero_description">We empower businesses with intelligent technology solutions that
-                    drive innovation, enhance
-                    efficiency, and create sustainable value for tomorrow's digital landscape.</p>
+                <h3 data-translate="hero_subtitle"
+                    style="color:rgb(48, 47, 47); margin-top: -10px; margin-bottom: 20px; font-weight: 400; opacity: 0; animation: heroTitleReveal 2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;">
+                    IT
+                    Solutions | Web
+                    Development | AI | SaaS Solution</h3>
+                <p data-translate="hero_description">Transform your business with Ascent Business Solutions, a trusted
+                    provider of digital transformation services, end-to-end IT support, & secure data modernization
+                    solutions. We help businesses improve operational efficiency, strengthen IT infrastructure, enhance
+                    data security, & scale faster with reliable, future-ready technology solutions.
+                </p>
                 <a href="#contact" class="btn btn-primary" data-translate="hero_cta">Get Started</a>
             </div>
             <div class="hero-image">
-                <img src="assets/hero-image.jpg" alt="Technology Solutions" class="movable-image">
+                <div class="image-clip-wrapper" id="heroCarousel">
+                    <img src="assets/hero-image.jpg" alt="Technology Solutions"
+                        class="movable-image carousel-slide active">
+                    <img src="assets/hero-image-2.jpg" alt="AI Solutions" class="movable-image carousel-slide">
+                    <img src="assets/hero-image-3.jpg" alt="Digital Services" class="movable-image carousel-slide">
+                </div>
             </div>
         </div>
     </section>
@@ -94,7 +128,10 @@
     <section id="about" class="about">
         <div class="container about-container">
             <div class="about-image">
-                <img src="assets/about-image.png" alt="About Navabharath Technologies">
+                <div class="image-clip-wrapper">
+                    <img src="assets/about-image.png" alt="About Navabharath Technologies" class="movable-image">
+                </div>
+                <p class="about-image-caption ceo-name-3d">Dinesh J K (CEO & Founder)</p>
             </div>
             <div class="about-content">
                 <h2 data-translate="about_title">About Us</h2>
@@ -102,15 +139,22 @@
                     dedicated to delivering innovative and robust digital products. With a team of expert developers and
                     designers, we transform ideas into reality. Our mission is to empower businesses with scalable,
                     efficient technology and comprehensive end-to-end services.</p>
-                <ul class="about-list">
-                    <li><i class="fas fa-check"></i> <span data-translate="about_feature1">Innovative Solutions</span>
-                    </li>
-                    <li><i class="fas fa-check"></i> <span data-translate="about_feature2">Digital Marketing</span>
-                    </li>
-                    <li><i class="fas fa-check"></i> <span data-translate="about_feature3">Customer-Centric
-                            Approach</span></li>
-                    <li><i class="fas fa-check"></i> <span data-translate="about_feature4">Expert Team</span></li>
-                </ul>
+                <div class="about-features-wrapper">
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> <span data-translate="about_feature1">Innovative
+                                Solutions</span>
+                        </li>
+                        <li><i class="fas fa-check"></i> <span data-translate="about_feature2">Digital Marketing</span>
+                        </li>
+                        <li><i class="fas fa-check"></i> <span data-translate="about_feature3">Customer-Centric
+                                Approach</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="about_feature4">Expert Team</span></li>
+                    </ul>
+                    <div class="about-cta">
+                        <a href="explore.html" class="btn btn-primary zoom-float-btn"
+                            data-translate="about_explore">Explore</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -122,43 +166,110 @@
                 <h2 data-translate="services_title">Our Services</h2>
                 <p data-translate="services_subtitle">Comprehensive solutions for your business needs</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon"><img src="assets/icon-web.png" alt="Web Development"></div>
-                    <h3 data-translate="service1_title">Web Development</h3>
-                    <p data-translate="service1_description">Custom websites built with modern technologies to ensure
-                        performance and scalability.</p>
+            <div class="services-scene">
+                <div class="services-carousel" id="servicesCarousel">
+                    <div class="service-card">
+                        <div class="icon"><img src="assets/icon-web.png" alt="Web Development"></div>
+                        <h3 data-translate="service1_title">Web Development</h3>
+                        <p data-translate="service1_description">Custom websites built with modern technologies to
+                            ensure
+                            performance and scalability.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><img src="assets/icon-mobile.png" alt="Mobile App Development"></div>
+                        <h3 data-translate="service2_title">Mobile App Development</h3>
+                        <p data-translate="service2_description">Native and cross-platform mobile applications designed
+                            for
+                            seamless user experiences.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><img src="assets/icon-design.png" alt="UI/UX Design"></div>
+                        <h3 data-translate="service4_title">UI/UX Design</h3>
+                        <p data-translate="service4_description">User-centered design that creates engaging and
+                            intuitive
+                            digital products.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><img src="assets/icon-digital-marketing.svg" alt="Digital Marketing"></div>
+                        <h3 data-translate="service5_title">Digital Marketing</h3>
+                        <p data-translate="service5_description">Implementing intelligent marketing strategies to boost
+                            your
+                            online presence.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><img src="assets/icon-ivr.svg" alt="IVR Solutions"></div>
+                        <h3 data-translate="service6_title">IVR Solutions</h3>
+                        <p data-translate="service6_description">Advanced Interactive Voice Response systems to automate
+                            customer interactions and streamline call management with intelligent voice menus.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><img src="assets/icon-gemini.svg" alt="AI Solutions"></div>
+                        <h3 data-translate="service7_title">AI Solutions</h3>
+                        <p data-translate="service7_description">Cutting-edge artificial intelligence and machine
+                            learning
+                            solutions to automate processes, enhance decision-making, and unlock data-driven insights
+                            for
+                            your business.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="icon"><img src="assets/icon-mobile.png" alt="Mobile App Development"></div>
-                    <h3 data-translate="service2_title">Mobile App Development</h3>
-                    <p data-translate="service2_description">Native and cross-platform mobile applications designed for
-                        seamless user experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="why_choose_title">Why Choose Navabharath Technologies?</h2>
+            </div>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="feature-text">
+                        <h4 data-translate="why_feature1_title">Future-Ready Solutions</h4>
+                        <p data-translate="why_feature1_desc">Building lasting digital foundations.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="icon"><img src="assets/icon-design.png" alt="UI/UX Design"></div>
-                    <h3 data-translate="service4_title">UI/UX Design</h3>
-                    <p data-translate="service4_description">User-centered design that creates engaging and intuitive
-                        digital products.</p>
+                <!-- Feature 2 -->
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <div class="feature-text">
+                        <h4 data-translate="why_feature2_title">High Security Standards</h4>
+                        <p data-translate="why_feature2_desc">Ensuring safe and protected data.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="icon"><img src="assets/icon-digital-marketing.svg" alt="Digital Marketing"></div>
-                    <h3 data-translate="service5_title">Digital Marketing</h3>
-                    <p data-translate="service5_description">Implementing intelligent marketing strategies to boost your
-                        online presence.</p>
+                <!-- Feature 3 -->
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-code"></i></div>
+                    <div class="feature-text">
+                        <h4 data-translate="why_feature3_title">End-to-End Development</h4>
+                        <p data-translate="why_feature3_desc">From research to deployment and support.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="icon"><img src="assets/icon-ivr.svg" alt="IVR Solutions"></div>
-                    <h3 data-translate="service6_title">IVR Solutions</h3>
-                    <p data-translate="service6_description">Advanced Interactive Voice Response systems to automate
-                        customer interactions and streamline call management with intelligent voice menus.</p>
+                <!-- Feature 4 -->
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                    <div class="feature-text">
+                        <h4 data-translate="why_feature4_title">Result-Driven Approach</h4>
+                        <p data-translate="why_feature4_desc">We focus on performance, speed, and usability.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="icon"><img src="assets/icon-gemini.svg" alt="AI Solutions"></div>
-                    <h3 data-translate="service7_title">AI Solutions</h3>
-                    <p data-translate="service7_description">Cutting-edge artificial intelligence and machine learning
-                        solutions to automate processes, enhance decision-making, and unlock data-driven insights for
-                        your business.</p>
+                <!-- Feature 5 -->
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+                    <div class="feature-text">
+                        <h4 data-translate="why_feature5_title">Client-Centric Team</h4>
+                        <p data-translate="why_feature5_desc">Dedicated support and transparent communication.</p>
+                    </div>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <div class="feature-text">
+                        <h4 data-translate="why_feature6_title">DevOps Services</h4>
+                        <p data-translate="why_feature6_desc">Secure, scalable, and reliable infrastructure.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -189,15 +300,16 @@
                 <form>
                     <div class="form-group">
                         <label for="name" data-translate="form_name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required maxlength="20">
                     </div>
                     <div class="form-group">
                         <label for="email" data-translate="form_email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
                     </div>
                     <div class="form-group">
                         <label for="message" data-translate="form_message">Message</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Enter Your Message"
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" data-translate="form_submit">Send Message</button>
                 </form>
@@ -209,8 +321,7 @@
     <footer>
         <div class="container footer-container">
             <div class="footer-logo">
-                <img src="assets/logo-full.png" alt="Navabharath Technologies">
-                <p data-translate="footer_tagline">Smarter Solutions for Better Future</p>
+                <img src="assets/logo-footer.png" alt="Navabharath Technologies">
             </div>
             <div class="footer-links">
                 <h4 data-translate="footer_links_title">Company</h4>
@@ -221,13 +332,25 @@
                     <li><a href="#contact" data-translate="footer_contact">Contact</a></li>
                 </ul>
             </div>
+            <div class="footer-links">
+                <h4 data-translate="footer_support">Support</h4>
+                <ul>
+                    <li><a href="terms.html" data-translate="footer_terms">Terms & Conditions</a></li>
+                    <li><a href="privacy.html" data-translate="footer_privacy">Privacy</a></li>
+                </ul>
+            </div>
             <div class="footer-social">
                 <h4 data-translate="footer_social_title">Follow Us</h4>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/share/1FhAzWaowQ/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/company/navabharath-technologies/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/navabharathtechnologies?igsh=MWh3cmtjM2JrNWtpaw==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/share/1ASy9ZSCSS/" aria-label="Facebook" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/navabharath-technologies/" aria-label="LinkedIn"
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/navabharathtechnologies?igsh=MWh3cmtjM2JrNWtpaw=="
+                        aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
