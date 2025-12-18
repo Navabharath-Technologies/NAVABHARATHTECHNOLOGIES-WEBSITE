@@ -1445,8 +1445,8 @@ footer {
     }
 
     .container {
-        padding: 0 24px;
-        /* Move from 12px to 24px */
+        padding-left: 32px !important;
+        padding-right: 32px !important;
     }
 
     /* Justify text for legal/content pages on mobile */
@@ -1456,14 +1456,26 @@ footer {
     .terms-section li,
     .privacy-section li {
         text-align: justify;
+        color: black !important;
+        /* Force black on mobile */
     }
 
     .hero-content h1 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        /* Reduced from 1.4rem */
     }
 
     .section-header h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        /* Reduced from 1.5rem */
+    }
+
+    /* Reduce legal page headings on mobile */
+    .terms-section h2,
+    .privacy-section h2,
+    .explore-section h2 {
+        font-size: 1.25rem !important;
+        /* Reduced from 1.5rem */
     }
 
     .services-grid {
@@ -1906,10 +1918,20 @@ footer {
     }
 
     .container {
-        padding: 0 32px;
-        /* Increased from 20px for tablet view */
+        /* Force side padding to override page-content resets */
+        padding-left: 48px !important;
+        padding-right: 48px !important;
         width: 100%;
         box-sizing: border-box;
+    }
+
+    /* Force black text for legal/content pages on tablet */
+    .terms-section p,
+    .privacy-section p,
+    .explore-section p,
+    .terms-section li,
+    .privacy-section li {
+        color: black !important;
     }
 
     h1 {

@@ -16,7 +16,7 @@ const translations = {
         // Hero Section
         hero_title: "Smarter Solutions for Better Future",
         hero_subtitle: "IT Solutions | Web Development | AI | SaaS Solution",
-        hero_description: "Transform your business with Ascent Business Solutions, a trusted provider of digital transformation services, end-to-end IT support, & secure data modernization solutions. We help businesses improve operational efficiency, strengthen IT infrastructure, enhance data security, & scale faster with reliable, future-ready technology solutions.",
+        hero_description: "Transform your business with Navabharath Technologies, a trusted provider of digital transformation services, end-to-end IT support, & secure data modernization solutions. We help businesses improve operational efficiency, strengthen IT infrastructure, enhance data security, & scale faster with reliable, future-ready technology solutions.",
         hero_cta: "Get Started",
 
         // About Section
