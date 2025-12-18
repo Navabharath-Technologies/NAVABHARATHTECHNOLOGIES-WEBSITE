@@ -1009,9 +1009,21 @@ footer {
     flex-wrap: wrap;
 }
 
+/* Center the middle links (Company & Support) */
+.footer-container>div:nth-child(2) {
+    margin-left: auto;
+}
+
+.footer-container>div:nth-child(3) {
+    margin-right: auto;
+}
+
 .footer-logo {
     flex: 0 0 auto;
     text-align: left;
+    margin-right: 0;
+    margin-left: 60px;
+    /* Move logo to the right */
 }
 
 .footer-logo img {
@@ -1031,10 +1043,13 @@ footer {
 
 .footer-links,
 .footer-social {
-    flex: 1 1 200px;
+    flex: 0 0 auto;
+    /* Stop growing, just fit content */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    min-width: 150px;
+    /* Ensure decent width */
 }
 
 .footer-links {
@@ -1429,6 +1444,20 @@ footer {
         font-size: 14px;
     }
 
+    .container {
+        padding: 0 24px;
+        /* Move from 12px to 24px */
+    }
+
+    /* Justify text for legal/content pages on mobile */
+    .terms-section p,
+    .privacy-section p,
+    .explore-section p,
+    .terms-section li,
+    .privacy-section li {
+        text-align: justify;
+    }
+
     .hero-content h1 {
         font-size: 1.4rem;
     }
@@ -1745,7 +1774,8 @@ footer {
 .explore-section p {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #4b5563;
+    color: #000;
+    /* Changed to pure black */
     /* Softer dark gray for reading */
     margin-bottom: 16px;
     max-width: 900px;
@@ -1759,7 +1789,8 @@ footer {
     /* Changed to none to allow custom icons if needed, or stick to disc */
     margin-left: 0;
     margin-bottom: 16px;
-    color: #4b5563;
+    color: #000;
+    /* Changed to pure black */
 }
 
 /* Specific list styling for these sections */
@@ -1767,10 +1798,13 @@ footer {
 .privacy-section ul li,
 .explore-section ul li {
     margin-bottom: 12px;
-    line-height: 1.6;
+    line-height: 1.7;
+    /* Increased to match p */
     display: flex;
     align-items: flex-start;
     gap: 10px;
+    font-size: 1.05rem;
+    /* Match p font size */
 }
 
 .terms-section strong,
@@ -1872,7 +1906,8 @@ footer {
     }
 
     .container {
-        padding: 0 20px;
+        padding: 0 32px;
+        /* Increased from 20px for tablet view */
         width: 100%;
         box-sizing: border-box;
     }
@@ -1995,6 +2030,9 @@ footer {
         width: 100%;
         text-align: center !important;
         margin-bottom: 20px;
+        margin-right: 0;
+        /* Reset margin for mobile */
+        margin-left: 0;
     }
 
     .footer-logo img {
@@ -2046,6 +2084,13 @@ footer {
         width: 100%;
         gap: 20px;
         display: flex;
+    }
+
+    /* Reset auto margins for mobile to prevent right-alignment */
+    .footer-container>div:nth-child(2),
+    .footer-container>div:nth-child(3) {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
