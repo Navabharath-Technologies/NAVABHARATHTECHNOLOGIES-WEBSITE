@@ -319,33 +319,33 @@ const translations = {
         blog_cb_title: "Chatbots vs Soporte Humano: ¿Qué es mejor para su negocio?",
         blog_cb_date: "15 de dic, 2025",
         blog_cb_author: "Equipo Técnico",
-        blog_cb_p1: "Customer expectations are rising faster than ever, pushing businesses to rethink how they deliver support. Both chatbots & human agents play powerful roles in shaping overall customer experiences. While automation can handle quick responses, real conversations still rely on emotional intelligence. Choosing the right balance impacts customer satisfaction, response time & operational cost. This article helps you understand where each option shines so you can decide what fits your business best.",
+        blog_cb_p1: "Las expectativas de los clientes están aumentando más rápido que nunca, lo que empuja a las empresas a repensar cómo brindan soporte. Tanto los chatbots como los agentes humanos juegan un papel poderoso en la configuración de las experiencias generales de los clientes. Si bien la automatización puede manejar respuestas rápidas, las conversaciones reales aún dependen de la inteligencia emocional. Elegir el equilibrio adecuado afecta la satisfacción del cliente, el tiempo de respuesta y el costo operativo. Este artículo le ayuda a comprender dónde brilla cada opción para que pueda decidir qué es lo mejor para su negocio.",
         blog_cb_h2_1: "1. Fortalezas del Soporte de Chatbot",
         blog_cb_key_adv: "Ventajas Clave",
         blog_cb_h3_1: "Respuestas Instantáneas",
-        blog_cb_p2: "Chatbots reply within seconds, helping businesses reduce wait times & handle peak hours efficiently.",
+        blog_cb_p2: "Los chatbots responden en segundos, ayudando a las empresas a reducir los tiempos de espera y manejar las horas pico de manera eficiente.",
         blog_cb_h3_2: "Disponibilidad 24/7",
-        blog_cb_p3: "Bots remain active day & night, ensuring customers get basic information, troubleshooting steps & updates anytime.",
+        blog_cb_p3: "Los bots permanecen activos día y noche, asegurando que los clientes obtengan información básica, pasos para solucionar problemas y actualizaciones en cualquier momento.",
         blog_cb_h3_3: "Operaciones Rentables",
-        blog_cb_p4: "Companies save on hiring & training costs since chatbots can manage repeated queries with consistent accuracy.",
+        blog_cb_p4: "Las empresas ahorran en costos de contratación y capacitación, ya que los chatbots pueden gestionar consultas repetidas con una precisión constante.",
         blog_cb_h3_4: "Escalabilidad durante alta demanda",
-        blog_cb_p5: "A single bot can talk to thousands of customers at once, making it ideal for fast-growing businesses.",
+        blog_cb_p5: "Un solo bot puede hablar con miles de clientes a la vez, lo que lo hace ideal para empresas de rápido crecimiento.",
         blog_cb_h3_5: "Recopilación de datos e información",
-        blog_cb_p6: "Bots automatically gather customer patterns, helping brands boost personalization & service quality.",
-        blog_cb_quote: "\"Imagine a world where your customers never have to wait. It's 2 AM, and a frustrated user needs a quick answer—your chatbot is there instantly, a tireless digital guardian awake while the city sleeps. But when the problem gets tough, that’s when the human touch steps in. Like a skilled diplomat, your human agent takes over, bringing empathy and deep understanding to complex issues that code simply cannot solve. This powerful duo—the speed of automation and the warmth of humanity—creates a support experience that doesn't just solve problems, but builds lasting trust.\"",
+        blog_cb_p6: "Los bots recopilan automáticamente patrones de clientes, ayudando a las marcas a impulsar la personalización y la calidad del servicio.",
+        blog_cb_quote: "\"Imagina un mundo donde tus clientes nunca tengan que esperar. Son las 2 AM y un usuario frustrado necesita una respuesta rápida: tu chatbot está ahí al instante, un guardián digital incansable despierto mientras la ciudad duerme. Pero cuando el problema se pone difícil, es cuando entra el toque humano. Como un diplomático experto, tu agente humano se hace cargo, aportando empatía y una comprensión profunda a problemas complejos que el código simplemente no puede resolver. Este dúo poderoso, la velocidad de la automatización y la calidez de la humanidad, crea una experiencia de soporte que no solo resuelve problemas, sino que construye una confianza duradera.\"",
         blog_cb_h2_2: "2. Fortalezas del Soporte Humano",
         blog_cb_h3_6: "1. Empatía y comprensión emocional",
-        blog_cb_p7: "Human agents offer something chatbots cannot—real emotional connection. They can sense frustration, happiness or confusion through tone & conversation flow. This helps customers feel understood, especially during stressful or sensitive issues. Empathy builds trust, reduces conflict & makes the customer feel valued as a person, not just another ticket.",
+        blog_cb_p7: "Los agentes humanos ofrecen algo que los chatbots no pueden: una conexión emocional real. Pueden sentir frustración, felicidad o confusión a través del tono y el flujo de la conversación. Esto ayuda a los clientes a sentirse comprendidos, especialmente durante problemas estresantes o delicados. La empatía genera confianza, reduce el conflicto y hace que el cliente se sienta valorado como persona, no solo como otro ticket.",
         blog_cb_h3_7: "2. Resolución de problemas personalizada",
-        blog_cb_p8: "Humans are naturally creative thinkers. They can analyze a customer’s issue from multiple angles, ask clarifying questions & suggest flexible solutions tailored to individual needs. This is helpful when problems do not follow a standard script. Personalized responses reassure customers that their situation is unique & is being handled by someone who genuinely cares.",
+        blog_cb_p8: "Los humanos son pensadores creativos por naturaleza. Pueden analizar el problema de un cliente desde múltiples ángulos, hacer preguntas aclaratorias y sugerir soluciones flexibles adaptadas a las necesidades individuales. Esto es útil cuando los problemas no siguen un guión estándar. Las respuestas personalizadas aseguran a los clientes que su situación es única y está siendo manejada por alguien que realmente se preocupa.",
         blog_cb_h3_8: "3. Mejor para problemas complicados",
-        blog_cb_p9: "Some problems require deeper investigation, multiple verification steps or critical judgment. Human agents excel in these situations because they understand context, exceptions & policies better than automated systems. They can coordinate with other departments, interpret unclear information & offer accurate guidance that bots often miss.",
+        blog_cb_p9: "Algunos problemas requieren una investigación más profunda, múltiples pasos de verificación o juicio crítico. Los agentes humanos sobresalen en estas situaciones porque entienden el contexto, las excepciones y las políticas mejor que los sistemas automatizados. Pueden coordinar con otros departamentos, interpretar información poco clara y ofrecer una orientación precisa que los bots a menudo pasan por alto.",
         blog_cb_h3_9: "4. Construcción de relaciones",
-        blog_cb_p10: "Strong customer relationships are built through real conversations. A friendly agent can turn a negative experience into a positive one by listening actively & showing patience. Over time, this human touch boosts brand loyalty & increases the chances of repeat business. Customers are more likely to trust companies that treat them like humans rather than transactions.",
+        blog_cb_p10: "Las relaciones sólidas con los clientes se construyen a través de conversaciones reales. Un agente amable puede convertir una experiencia negativa en una positiva escuchando activamente y mostrando paciencia. Con el tiempo, este toque humano aumenta la lealtad a la marca y las posibilidades de que se repitan los negocios. Es más probable que los clientes confíen en las empresas que los tratan como humanos en lugar de transacciones.",
         blog_cb_h3_10: "5. Comprensión cultural y matices del idioma",
-        blog_cb_p11: "Human agents naturally understand tone, slang, regional expressions & cultural sensitivities. This ensures smoother communication & avoids misunderstandings that bots often face. Whether it’s adjusting language formality or understanding local behavior patterns, humans can adapt instantly—making the experience more natural & respectful.",
+        blog_cb_p11: "Los agentes humanos entienden naturalmente el tono, la jerga, las expresiones regionales y las sensibilidades culturales. Esto asegura una comunicación más fluida y evita malentendidos que los bots a menudo enfrentan. Ya sea ajustando la formalidad del lenguaje o entendiendo los patrones de comportamiento local, los humanos pueden adaptarse instantáneamente, haciendo que la experiencia sea más natural y respetuosa.",
         blog_cb_conclusion_title: "CONCLUSIÓN",
-        blog_cb_conclusion_p: "Both chatbots & human support offer unique strengths, making them valuable in different situations. Chatbots are perfect for quick replies, repeated questions & cost-efficient operations. Human agents shine when conversations require emotional care, critical thinking or deep problem-solving. Instead of choosing one over the other, most businesses succeed by blending automation with human expertise. This balanced approach creates faster, smarter & more human-centered support experiences for every customer.",
+        blog_cb_conclusion_p: "Tanto los chatbots como el soporte humano ofrecen fortalezas únicas, lo que los hace valiosos en diferentes situaciones. Los chatbots son perfectos para respuestas rápidas, preguntas repetidas y operaciones rentables. Los agentes humanos brillan cuando las conversaciones requieren cuidado emocional, pensamiento crítico o resolución de problemas profundos. En lugar de elegir uno sobre el otro, la mayoría de las empresas tienen éxito al combinar la automatización con la experiencia humana. Este enfoque equilibrado crea experiencias de soporte más rápidas, inteligentes y centradas en el ser humano para cada cliente.",
         blog_back_btn: "Volver al Blog"
     },
     fr: {
@@ -1758,8 +1758,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Mouse Wheel Scroll
         carouselScene.addEventListener('wheel', (e) => {
             e.preventDefault();
-            // Scroll faster with wheel: e.deltaY * 2.5
-            currentScroll -= e.deltaY * 2.5;
+
+            // Prioritize horizontal scroll if dominant (for trackpads)
+            let delta = e.deltaY;
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+                delta = e.deltaX;
+            }
+
+            // Normalize scroll speed for more uniform movement
+            // Reduced multiplier to prevent jumpiness
+            currentScroll -= delta * 1.0;
         }, { passive: false });
 
         // Touch Swipe Event Listeners
@@ -1821,25 +1829,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smart Sticky Header Logic
     let lastScrollY = window.pageYOffset;
     const header = document.querySelector('header');
+    let ticking = false;
 
     window.addEventListener('scroll', () => {
-        const currentScrollY = window.pageYOffset;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const currentScrollY = window.pageYOffset;
 
-        // Always show if at top
-        if (currentScrollY <= 0) {
-            header.classList.remove('header-hidden');
-            lastScrollY = currentScrollY;
-            return;
+                // Always show if at top
+                if (currentScrollY <= 0) {
+                    header.classList.remove('header-hidden');
+                    lastScrollY = currentScrollY;
+                    ticking = false;
+                    return;
+                }
+
+                // Hide on scroll down, Show on scroll up
+                if (currentScrollY > lastScrollY && !header.classList.contains('header-hidden')) {
+                    header.classList.add('header-hidden');
+                } else if (currentScrollY < lastScrollY && header.classList.contains('header-hidden')) {
+                    header.classList.remove('header-hidden');
+                }
+
+                lastScrollY = currentScrollY;
+                ticking = false;
+            });
+            ticking = true;
         }
-
-        // Hide on scroll down, Show on scroll up
-        if (currentScrollY > lastScrollY && !header.classList.contains('header-hidden')) {
-            header.classList.add('header-hidden');
-        } else if (currentScrollY < lastScrollY && header.classList.contains('header-hidden')) {
-            header.classList.remove('header-hidden');
-        }
-
-        lastScrollY = currentScrollY;
     });
 });
 
