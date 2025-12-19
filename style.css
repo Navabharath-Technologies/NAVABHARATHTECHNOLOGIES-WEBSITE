@@ -953,7 +953,7 @@ nav a {
 }
 
 .detail-item i {
-    color: #ec4899;
+    color: #AD650F;
     width: 20px;
 }
 
@@ -1091,6 +1091,7 @@ footer {
 .social-icons {
     display: flex;
     gap: 10px;
+    margin-left: -30px;
 }
 
 .social-icons a {
@@ -1566,8 +1567,12 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        /* gap: 8px; */
+        /* padding: 6px 12px; */
         gap: 8px;
-        padding: 6px 12px;
+        padding: 6px 8px 6px 5px !important;
+        /* Override container padding to move logo left */
+        width: 100% !important;
     }
 
     /* Adjust search container for mobile */
@@ -1581,6 +1586,20 @@ footer {
         width: 100px;
         /* Smaller input width */
         font-size: 0.85rem;
+    }
+
+    .search-input.show-mobile {
+        display: block !important;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1002;
+        border: 1px solid #ddd;
+        padding: 10px;
     }
 
     .voice-search-btn {

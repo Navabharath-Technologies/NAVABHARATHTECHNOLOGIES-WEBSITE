@@ -1404,8 +1404,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Search button click
     if (searchBtn) {
-        searchBtn.addEventListener('click', () => {
-            performSearch(searchInput.value);
+        searchBtn.addEventListener('click', (e) => {
+            // Mobile handling: Simple toggle logic
+            const isMobile = window.innerWidth <= 768; // Cover tablets too just in case
+
+            if (isMobile) {
+                e.preventDefault();
+                if (searchInput.classList.contains('show-mobile')) {
+                    if (searchInput.value.trim() !== '') {
+                        performSearch(searchInput.value);
+                        searchInput.classList.remove('show-mobile');
+                    } else {
+                        // Close if empty and clicked again
+                        searchInput.classList.remove('show-mobile');
+                    }
+                } else {
+                    searchInput.classList.add('show-mobile');
+                    searchInput.focus();
+                }
+            } else {
+                performSearch(searchInput.value);
+            }
         });
     }
 
