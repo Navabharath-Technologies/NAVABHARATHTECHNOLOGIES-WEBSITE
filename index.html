@@ -373,39 +373,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
-    
-<div id="nyPopup">
-  <h2>🎉 Happy New Year from Our Team! 🎉</h2>
-  <button onclick="closePopup()">Celebrate</button>
-</div>
-
-<script>
-  function launchPartyPoppers() {
-    confetti({
-      particleCount: 200,
-      spread: 70,
-      origin: { y: 0.6 }
-    });
-  }
-
-  function closePopup() {
-    document.getElementById("nyPopup").style.display = "none";
-    launchPartyPoppers();
-    sessionStorage.setItem("nyPopupShown", "true");
-  }
-
-  // Show popup only once per session
-  window.onload = function () {
-    if (!sessionStorage.getItem("nyPopupShown")) {
-      document.getElementById("nyPopup").style.display = "block";
-    } else {
-      document.getElementById("nyPopup").style.display = "none";
-    }
-  };
-</script>
-
 </body>
 
 </html>
