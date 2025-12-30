@@ -2170,4 +2170,33 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     letter-spacing: 1px;
+} 
+/* ================================
+   Happy New Year Popup Styling
+   ================================ */
+
+#nyPopup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  z-index: 9999;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: none; /* important */
 }
+
+#nyPopup button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff4081;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
