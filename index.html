@@ -18,6 +18,15 @@
     <title>Navabharath Technologies | IT Solutions, Web Development, AI, Digital Marketing</title>
     <meta name="description"
         content="Navabharath Technologies provides web development, mobile app development, AI solutions, IVR systems, UI/UX design, and digital marketing services. We deliver intelligent, scalable, and future-ready technology solutions for businesses.">
+    <link rel="canonical" href="https://www.navabharathtechnologies.com/">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.navabharathtechnologies.com/">
+    <meta property="og:title" content="Navabharath Technologies | IT Solutions, Web Development, AI, Digital Marketing">
+    <meta property="og:description"
+        content="Navabharath Technologies provides web development, mobile app development, AI solutions, IVR systems, UI/UX design, and digital marketing services.">
+    <meta property="og:image" content="https://www.navabharathtechnologies.com/assets/android-chrome-512x512.png">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="notification.css">
@@ -26,17 +35,78 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 
-    <!-- Favicons -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="assets/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <!-- Favicons - Optimized for Search Engines -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+
     <link rel="manifest" href="site.webmanifest">
 
 
 
+
+    <!-- Structured Data for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Navabharath Technologies",
+      "url": "https://www.navabharathtechnologies.com",
+      "logo": "https://www.navabharathtechnologies.com/assets/android-chrome-512x512.png",
+      "description": "Navabharath Technologies provides web development, mobile app development, AI solutions, IVR systems, UI/UX design, and digital marketing services.",
+      "email": "contact@navabharathtechnologies.com",
+      "telephone": "+91-7996078472",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "#667/B 2nd Floor, Chitrabhanu Road Kuvempu Nagar",
+        "addressLocality": "Mysore",
+        "addressRegion": "Karnataka",
+        "postalCode": "570023",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1ASy9ZSCSS/",
+        "https://www.linkedin.com/company/navabharath-technologies/",
+        "https://www.instagram.com/navabharathtechnologies",
+        "https://www.youtube.com/@NavabharathTechnologies"
+      ]
+    }
+    </script>
+
 </head>
 
 <body>
+    <!-- Happy New Year Popup -->
+    <div id="newYearPopup" class="new-year-popup-overlay">
+        <div class="new-year-popup">
+            <div class="new-year-popup-content">
+                <div class="new-year-logo">
+                    <img src="assets/logo.png" alt="Navabharath Technologies">
+                </div>
+                <div class="new-year-header">
+                    <h2 class="new-year-title">HAPPY NEW YEAR</h2>
+                    <h3 class="new-year-year">2026</h3>
+                </div>
+                <div class="new-year-message">
+                    <p class="new-year-greeting">May this new year bring you prosperity, innovation, and limitless
+                        possibilities!</p>
+                    <p class="new-year-tagline">Thank you for being a valued part of our journey.</p>
+                    <p class="new-year-signature">- Team Navabharath Technologies</p>
+                </div>
+                <button class="new-year-close-btn" onclick="closeNewYearPopup()">
+                    <span>Let's Celebrate Together!</span>
+                    <i class="fas fa-rocket"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Fireworks/Crackers Container -->
+        <div class="fireworks-container" id="fireworksContainer"></div>
+    </div>
+
     <!-- Custom Notification -->
     <div id="customNotification" class="custom-notification"></div>
 
