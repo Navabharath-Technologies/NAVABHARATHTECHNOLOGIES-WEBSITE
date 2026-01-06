@@ -8,9 +8,13 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-0DJHRSEB8S');
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="assets/DMlogo.png">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -29,26 +33,30 @@
 
     <link rel="manifest" href="site.webmanifest">
 
+    <!-- Font Loading Strategy: Combine preload and stylesheet -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap">
+    </noscript>
+
     <link rel="stylesheet" href="digital-marketing.css">
     <link rel="stylesheet" href="bg-animations.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
     <div class="custom-cursor"></div>
     <div id="shockwave-container"></div>
 
-    <div id="shockwave-container"></div>
-
-    <!-- Navigation -->
-
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo-section">
                 <a href="index.html" class="logo">
-                    <img src="assets/DMlogo.png" alt="Navabharath Technologies Logo" class="logo-img">
+                    <img src="assets/DMlogo.png" alt="Navabharath Technologies Logo" class="logo-img" width="180"
+                        height="70" decoding="async">
                 </a>
                 <div class="brand-info">
                     <a href="index.html" class="brand-link">
@@ -153,7 +161,8 @@
                         <div class="service-card-front">
                             <h3>Search Engine Optimization</h3>
                             <div class="service-icon">
-                                <img src="assets/seo-card.png" alt="SEO">
+                                <img src="assets/seo-card.png" alt="SEO" loading="lazy" width="200" height="200"
+                                    decoding="async">
                             </div>
                         </div>
                         <div class="service-card-back">
@@ -169,7 +178,8 @@
                         <div class="service-card-front">
                             <h3>Social Media Marketing</h3>
                             <div class="service-icon">
-                                <img src="assets/social-media-card.jpg" alt="Social Media">
+                                <img src="assets/social-media-card.jpg" alt="Social Media" loading="lazy" width="200"
+                                    height="200" decoding="async">
                             </div>
                         </div>
                         <div class="service-card-back">
@@ -185,7 +195,8 @@
                         <div class="service-card-front">
                             <h3>Content Marketing</h3>
                             <div class="service-icon">
-                                <img src="assets/content-marketing-card.jpg" alt="Content Marketing">
+                                <img src="assets/content-marketing-card.jpg" alt="Content Marketing" loading="lazy"
+                                    width="200" height="200" decoding="async">
                             </div>
                         </div>
                         <div class="service-card-back">
@@ -200,7 +211,8 @@
                         <div class="service-card-front">
                             <h3>Pay-Per-Click Advertising</h3>
                             <div class="service-icon">
-                                <img src="assets/ppc-card.jpg" alt="Pay-Per-Click Advertising">
+                                <img src="assets/ppc-card.jpg" alt="Pay-Per-Click Advertising" loading="lazy"
+                                    width="200" height="200" decoding="async">
                             </div>
                         </div>
                         <div class="service-card-back">
@@ -216,7 +228,8 @@
                         <div class="service-card-front">
                             <h3>Email Marketing</h3>
                             <div class="service-icon">
-                                <img src="assets/email-marketing-card.jpg" alt="Email Marketing">
+                                <img src="assets/email-marketing-card.jpg" alt="Email Marketing" loading="lazy"
+                                    width="200" height="200" decoding="async">
                             </div>
                         </div>
                         <div class="service-card-back">
@@ -232,7 +245,8 @@
                         <div class="service-card-front">
                             <h3>Analytics & Reporting</h3>
                             <div class="service-icon">
-                                <img src="assets/analytics-card.jpg" alt="Analytics & Reporting">
+                                <img src="assets/analytics-card.jpg" alt="Analytics & Reporting" loading="lazy"
+                                    width="200" height="200" decoding="async">
                             </div>
                         </div>
                         <div class="service-card-back">
@@ -254,6 +268,7 @@
 
     <!-- Case Studies Section -->
     <section class="case-studies" id="case-studies">
+        <canvas id="industries-snow-canvas" class="snow-canvas"></canvas>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Industries We Serve</h2>
@@ -607,7 +622,9 @@
         </div>
     </div>
 
-    <script src="digital-marketing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="digital-marketing.js" defer></script>
 </body>
 
 </html>
