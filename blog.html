@@ -121,7 +121,8 @@
         .blog-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            background: #f8f9fa;
             transition: transform 0.5s ease;
         }
 
@@ -192,6 +193,109 @@
             transform: translateZ(35px) scale(1.05);
             gap: 12px;
         }
+
+        /* Upcoming / Coming Soon styling - Unique Futuristic Design */
+        .blog-card.upcoming {
+            position: relative;
+            pointer-events: none;
+            user-select: none;
+            overflow: hidden;
+            border: 1px solid rgba(26, 60, 135, 0.1);
+        }
+
+        /* Target children for blur, keeping the tag sharp */
+        .blog-card.upcoming .blog-image,
+        .blog-card.upcoming .blog-content {
+            filter: blur(5px) grayscale(0.7);
+            opacity: 0.6;
+            transition: all 0.5s ease;
+        }
+
+        .blog-card.upcoming::after {
+            content: "UPCOMING";
+            position: absolute;
+            top: -10px;
+            right: 25px;
+            background: linear-gradient(180deg, #1a3c87 0%, #000 100%);
+            color: #00f2fe;
+            /* Electric Cyan */
+            padding: 25px 8px 15px 8px;
+            width: 45px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 0.8rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            z-index: 100;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+            border: 1px solid #00f2fe;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 242, 254, 0.3);
+            animation: cyber-tag-pulse 2.5s infinite alternate;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
+        }
+
+        /* Shine effect for the tag */
+        .blog-card.upcoming::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            width: 45px;
+            height: 2px;
+            background: #fff;
+            box-shadow: 0 0 15px #fff;
+            z-index: 101;
+            animation: tag-scan 4s infinite linear;
+            opacity: 0.7;
+        }
+
+        @keyframes cyber-tag-pulse {
+            0% {
+                transform: translateY(0);
+                filter: brightness(1);
+            }
+
+            100% {
+                transform: translateY(5px);
+                filter: brightness(1.3) drop-shadow(0 0 8px #00f2fe);
+            }
+        }
+
+        @keyframes tag-scan {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(70px);
+                opacity: 1;
+            }
+
+            95% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(80px);
+                opacity: 0;
+            }
+        }
+
+        .blog-card.upcoming .read-more-btn {
+            background: #444;
+            color: #888;
+            border: 1px solid #555;
+            box-shadow: none;
+        }
     </style>
 </head>
 
@@ -204,7 +308,7 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/logo.png" alt="Navabharath Technologies">
+                    <img src="assets/logo.png" alt="Navabharath Technologies" loading="lazy">
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">
@@ -308,27 +412,77 @@
                     <p class="blog-excerpt">Discover 10 proven techniques and the
                         exclusive 7-7-7 Fresher Hiring Formula to help you land your first job faster with smart
                         strategies.</p>
-                    <a href="blog-cloud-security.html" class="read-more-btn"><span data-translate="read_more">Read
+                    <a href="blog-freshers-job.html" class="read-more-btn"><span data-translate="read_more">Read
                             More</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
 
             <!-- Blog Post 3 -->
-            <article class="blog-card coming-soon">
+            <article class="blog-card">
                 <div class="blog-image">
-                    <img src="assets/hero-image.jpg" alt="Web Development Trends" loading="lazy">
+                    <img src="assets/page-speed-optimization.png" alt="Page Speed Optimization" loading="lazy">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
-                        <span><i class="far fa-calendar-alt"></i> Dec 05, 2025</span>
+                        <span><i class="far fa-calendar-alt"></i> Jan 07, 2026</span>
                         <span><i class="far fa-user"></i> Web Dev Team</span>
                     </div>
-                    <h3 class="blog-title" data-translate="blog_post3_title">Top Web Development Trends for 2026</h3>
-                    <p class="blog-excerpt" data-translate="blog_post3_excerpt">Stay ahead of the curve with our
-                        analysis of the emerging trends in web
-                        development that will shape the internet next year.</p>
-                    <a href="#" class="read-more-btn"><span data-translate="read_more">Read More</span> <i
-                            class="fas fa-arrow-right"></i></a>
+                    <h3 class="blog-title">Why Is Page Speed Optimization So Important in 2026?</h3>
+                    <p class="blog-excerpt">In 2026, website speed is no longer optional. Learn how fast-loading pages
+                        impact SEO performance, user experience, and conversion rates.</p>
+                    <a href="blog-web-development.html" class="read-more-btn"><span data-translate="read_more">Read
+                            More</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Upcoming Post 1 -->
+            <article class="blog-card upcoming">
+                <div class="blog-image">
+                    <img src="assets/hero-image.webp" alt="Cloud Security" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Coming Soon</span>
+                        <span><i class="far fa-user"></i> Security Team</span>
+                    </div>
+                    <h3 class="blog-title">Mastering Cloud Security: Protecting Data in 2026</h3>
+                    <p class="blog-excerpt">As cyber threats evolve, learn the latest strategies and tools to keep your
+                        organization's cloud infrastructure secure and resilient.</p>
+                    <a href="#" class="read-more-btn"><span>Coming Soon</span> <i class="fas fa-lock"></i></a>
+                </div>
+            </article>
+
+            <!-- Upcoming Post 2 -->
+            <article class="blog-card upcoming">
+                <div class="blog-image">
+                    <img src="assets/hero-image-2.webp" alt="AI Trends" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Coming Soon</span>
+                        <span><i class="far fa-user"></i> AI Lab</span>
+                    </div>
+                    <h3 class="blog-title">The Future of Generative AI: Beyond Chatbots</h3>
+                    <p class="blog-excerpt">Explore how generative AI is transforming industries from healthcare to
+                        finance, and what the next wave of innovation will look like.</p>
+                    <a href="#" class="read-more-btn"><span>Coming Soon</span> <i class="fas fa-robot"></i></a>
+                </div>
+            </article>
+
+            <!-- Upcoming Post 3 -->
+            <article class="blog-card upcoming">
+                <div class="blog-image">
+                    <img src="assets/hero-image-3.jpg" alt="SaaS Growth" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Coming Soon</span>
+                        <span><i class="far fa-user"></i> Growth Team</span>
+                    </div>
+                    <h3 class="blog-title">Scaling SaaS: Lessons from the Top 1%</h3>
+                    <p class="blog-excerpt">Discover the core principles that enable successful SaaS companies to scale
+                        from zero to millions of users with high efficiency.</p>
+                    <a href="#" class="read-more-btn"><span>Coming Soon</span> <i class="fas fa-chart-line"></i></a>
                 </div>
             </article>
         </div>
@@ -360,8 +514,9 @@
             <div class="footer-social">
                 <h4 data-translate="footer_social_title">Follow Us</h4>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/share/1ASy9ZSCSS/" aria-label="Facebook" target="_blank"
-                        rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61584661233790"
+                        aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="https://www.linkedin.com/company/navabharath-technologies/" aria-label="LinkedIn"
                         target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.instagram.com/navabharathtechnologies?igsh=MWh3cmtjM2JrNWtpaw=="

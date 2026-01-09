@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .image-clip-wrapper {
     overflow: hidden;
     border-radius: 20px;
@@ -2139,7 +2147,6 @@ footer {
     }
 
     /* 5. Footer Layout */
-    /* 5. Footer Layout */
     .footer-container {
         display: flex;
         flex-direction: column;
@@ -2147,6 +2154,7 @@ footer {
         text-align: center;
         align-items: center;
         padding-bottom: 40px;
+
     }
 
     .footer-logo {

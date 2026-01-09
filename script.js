@@ -2152,9 +2152,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // Hide on scroll down, Show on scroll up
-                if (currentScrollY > lastScrollY && !header.classList.contains('header-hidden')) {
-                    header.classList.add('header-hidden');
-                } else if (currentScrollY < lastScrollY && header.classList.contains('header-hidden')) {
+                // Only hide on non-home pages
+                if (!document.getElementById('home')) {
+                    if (currentScrollY > lastScrollY && !header.classList.contains('header-hidden')) {
+                        header.classList.add('header-hidden');
+                    } else if (currentScrollY < lastScrollY && header.classList.contains('header-hidden')) {
+                        header.classList.remove('header-hidden');
+                    }
+                } else {
+                    // On home page, always keep header visible
                     header.classList.remove('header-hidden');
                 }
 

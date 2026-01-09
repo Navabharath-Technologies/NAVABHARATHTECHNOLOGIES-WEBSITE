@@ -194,6 +194,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const mouseConstraint = MouseConstraint.create(engine, {
             mouse: mouse, constraint: { stiffness: 0.2, render: { visible: false } }
         });
+
+        // Allow page scrolling over the canvas by removing wheel listeners
+        mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
+        mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
+
         Composite.add(world, mouseConstraint);
         render.mouse = mouse;
         Render.run(render);
