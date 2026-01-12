@@ -36,12 +36,22 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
         const currentScroll = window.scrollY;
         if (navbar) {
-            if (currentScroll > 50) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
+            // Add 'scrolled' class when page is scrolled down
+            if (currentScroll > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
 
+            // Smart Scroll Logic: Hide on Scroll Down, Show on Scroll Up
             if (Math.abs(currentScroll - lastScrollTop) > scrollThreshold) {
-                if (currentScroll > lastScrollTop && currentScroll > 100) navbar.classList.add('navbar-hidden');
-                else navbar.classList.remove('navbar-hidden');
+                if (currentScroll > lastScrollTop && currentScroll > 100) {
+                    // Scrolling Down -> Hide Navbar
+                    navbar.classList.add('navbar-hidden');
+                } else {
+                    // Scrolling Up -> Show Navbar
+                    navbar.classList.remove('navbar-hidden');
+                }
                 lastScrollTop = currentScroll;
             }
         }
@@ -455,4 +465,28 @@ document.addEventListener('DOMContentLoaded', function () {
     initLocalizedSnow('industries-snow-canvas');
 
     console.log('%c🚀 Digital Marketing Landing Page | Navabharath Technologies', 'font-size: 16px; font-weight: bold; color: #667eea;');
+});
+
+// ===================================
+// URL CLEANER SYSTEM (Backend & Frontend Sync)
+// ===================================
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.protocol !== 'file:') {
+        // 1. Clean Address Bar
+        const currentPath = window.location.pathname;
+        if (currentPath.endsWith('.html')) {
+            let newPath = currentPath.slice(0, -5);
+            if (newPath.endsWith('/index')) newPath = newPath.slice(0, -6) || '/';
+            window.history.replaceState(null, '', newPath + window.location.search + window.location.hash);
+        }
+        // 2. Clean Links
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.includes('.html') && !href.startsWith('http') && !href.startsWith('//')) {
+                let newHref = href === 'index.html' ? '/' : href.replace('.html', '');
+                if (href.startsWith('index.html#')) newHref = '/' + href.substring(10);
+                link.setAttribute('href', newHref);
+            }
+        });
+    }
 });

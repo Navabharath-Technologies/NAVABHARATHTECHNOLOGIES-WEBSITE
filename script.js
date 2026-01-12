@@ -15,8 +15,8 @@ const translations = {
 
         // Hero Section
         hero_title: "Smarter Solutions for Better Future",
-        hero_subtitle: "IT Solutions | Web Development | AI | SaaS Solution",
-        hero_description: "Transform your business with Navabharath Technologies, a trusted provider of digital transformation services, end-to-end IT support, & secure data modernization solutions. We help businesses improve operational efficiency, strengthen IT infrastructure, enhance data security, & scale faster with reliable, future-ready technology solutions.",
+        hero_subtitle: "Web Development | Mobile Apps | SEO | Digital Marketing",
+        hero_description: "Navabharath Technologies is a trusted software company in Mysore specializing in digital transformation, end-to-end IT services, and secure data modernization. We empower businesses to improve operational efficiency, build scalable IT infrastructure, protect critical data, and accelerate growth with innovative, future-ready technology solutions.",
         hero_cta: "Get Started",
 
         // About Section
@@ -2217,5 +2217,55 @@ blogCards.forEach(card => {
             glareEl.style.opacity = '0';
         }
     });
+});
+
+// ===================================
+// URL CLEANER SYSTEM (Backend & Frontend Sync)
+// ===================================
+// This script automatically removes .html extensions from:
+// 1. The browser address bar (visual only, no reload)
+// 2. Internal navigation links (so clicks lead to clean URLs)
+// It only runs on live servers (http/https) to preserve local file browsing.
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if we are on a live server (not local file system)
+    if (window.location.protocol !== 'file:') {
+
+        // 1. Clean the Address Bar
+        const currentPath = window.location.pathname;
+        if (currentPath.endsWith('.html')) {
+            let newPath = currentPath.slice(0, -5);
+            // Handle 'index.html' specifically to root /
+            if (newPath.endsWith('/index')) {
+                newPath = newPath.slice(0, -6); // remove '/index'
+                if (newPath === '') newPath = '/';
+            }
+            // Update history without reloading
+            window.history.replaceState(null, '', newPath + window.location.search + window.location.hash);
+        }
+
+        // 2. Clean Internal Links
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href');
+
+            // Skip external links, anchors, or already clean links
+            if (!href || href.startsWith('http') || href.startsWith('//') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+            // Handle .html links
+            if (href.includes('.html')) {
+                let newHref = href;
+
+                // Special handling for index.html
+                if (newHref === 'index.html') {
+                    newHref = '/';
+                } else if (newHref.startsWith('index.html#')) {
+                    newHref = '/' + newHref.substring(10); // e.g. index.html#home -> /#home
+                } else {
+                    newHref = newHref.replace('.html', '');
+                }
+
+                link.setAttribute('href', newHref);
+            }
+        });
+    }
 });
 

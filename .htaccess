@@ -1,7 +1,11 @@
 RewriteEngine On
 
 
-# 2. Redirect /page.html to /page
+# 2. Redirect /index.html to /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
+
+# 3. Redirect /page.html to /page
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html\ HTTP/
 RewriteRule ^(.+)\.html$ /$1 [R=301,L]
 
