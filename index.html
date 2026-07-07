@@ -185,6 +185,23 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Background Video (Muted, AutoPlay, Fits to Screen, Loops at 7s) -->
+        <video id="heroBgVideo" class="hero-bg-video" autoplay muted playsinline loop>
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const video = document.getElementById("heroBgVideo");
+                if (video) {
+                    video.addEventListener("timeupdate", function() {
+                        if (video.currentTime >= 7) {
+                            video.currentTime = 0;
+                            video.play();
+                        }
+                    });
+                }
+            });
+        </script>
 
         <div class="container hero-container">
 
@@ -207,7 +224,7 @@
                     Navabharath Technologies is a <span class="text-highlight-blue">Mysuru-based Software Company</span>
                     helping businesses adapt,
                     grow, and stay secure in a digital-first world. We design practical IT solutions that
-                    simplify operations and support long-term growth.
+                    simplify operations and support long-term growth. From custom web development and mobile applications to AI-driven automation and strategic digital marketing, we provide end-to-end services tailored to your unique goals. Partner with us to accelerate your digital transformation and outpace the competition.
                 </p>
 
                 <!-- Buttons -->
@@ -219,43 +236,21 @@
                 <!-- Trust line removed per user request -->
             </div>
 
-            <!-- RIGHT: Mac-style visual card with floating chips -->
-            <div class="hero-visual">
-                <div class="hero-glow-blob"></div>
-                <div class="visual-wrap">
-                    <!-- Mac-style card -->
-                    <div class="main-card">
-                        <div class="card-header-bar">
-                            <div class="card-dots">
-                                <span class="dot dot-r"></span>
-                                <span class="dot dot-y"></span>
-                                <span class="dot dot-g"></span>
-                            </div>
-                            <span class="card-label">navabharath.tech · dashboard</span>
+                <!-- New Rating Display -->
+                <div class="hero-rating-modern" style="margin-top: 40px; display: flex; align-items: center; gap: 15px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 12px 20px; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.2); width: fit-content;">
+                    <div class="rating-val" style="font-size: 1.5rem; font-weight: 700; color: #f59e0b;">98%</div>
+                    <div style="height: 30px; width: 1px; background: rgba(255, 255, 255, 0.3);"></div>
+                    <div>
+                        <div class="stars" style="color: #f59e0b; font-size: 0.9rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                         </div>
-                        <img src="assets/hero-main-v1.webp" alt="Navabharath Technologies Digital Solutions"
-                            fetchpriority="high">
-                        <div class="card-footer-bar">
-                            <div class="card-footer-text">
-                                <div class="cfooter-title">Enterprise IT Solutions</div>
-                                <div class="cfooter-sub">Powering digital transformation</div>
-                            </div>
-                            <span class="card-live-tag">LIVE ●</span>
-                        </div>
-                    </div>
-                    <!-- Floating chip 2 -->
-                    <div class="hero-chip chip2">
-                        <div class="chip-inner">
-                            <div class="chip-accent-bar" style="background:linear-gradient(180deg,#b45309,#d97706)">
-                            </div>
-                            <div>
-                                <div class="chip-label">Satisfaction</div>
-                                <div class="chip-val chip-amber">98<span class="chip-sup chip-amber">%</span></div>
-                                <div class="chip-sub">Rating 4.9 / 5 ⭐</div>
-                            </div>
-                        </div>
+                        <div style="font-size: 0.8rem; color: #e2e8f0; font-weight: 500;">Satisfaction Rating (4.9/5)</div>
                     </div>
                 </div>
+            </div>
+
+            <!-- RIGHT: Empty space to let background video shine -->
+            <div class="hero-visual-empty">
             </div>
 
         </div>
@@ -274,10 +269,15 @@
             </div>
             <div class="about-content">
                 <h2 data-translate="about_title">About Us</h2>
-                <p data-translate="about_description">Navabharath Technologies is a leading IT solutions provider
-                    dedicated to delivering innovative & robust digital products. With a team of expert developers &
-                    designers, we transform ideas into reality. Our mission is to empower businesses with scalable,
-                    good technology & comprehensive end-to-end services.</p>
+                <p data-translate="about_description">
+                    Navabharath Technologies is a leading IT solutions provider dedicated to delivering innovative and
+                    robust digital products. With a team of expert developers and designers, we transform ideas into
+                    reality. Our mission is to empower businesses with scalable, efficient technology and comprehensive
+                    end-to-end services. We believe that every successful project starts with a deep understanding of our client's vision. By combining industry best practices with cutting-edge tools, we ensure that our solutions are not only highly secure and reliable, but also intuitive and engaging for the end user. Whether you are a startup looking to make an impact or an established enterprise aiming to scale, we are here to support your journey every step of the way.
+                </p>
+                <p style="margin-top: 15px;">
+                    Under the visionary leadership of our CEO & Founder, Dinesh J K, we have cultivated a culture of continuous learning and technical excellence. Our dedicated team of professionals doesn't just write code—we build lasting partnerships with our clients. From the initial consultation through deployment and ongoing maintenance, we prioritize transparent communication, agile development methodologies, and a steadfast commitment to delivering exceptional return on investment.
+                </p>
                 <div class="about-features-wrapper">
                     <ul class="about-list">
                         <li><i class="fas fa-check"></i> <span data-translate="about_feature1">Innovative
@@ -307,46 +307,50 @@
                 </h2>
                 <p data-translate="services_subtitle">Comprehensive solutions built for ambitious businesses</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
+            <div class="services-grid-bento">
+                <div class="service-card service-card-premium bento-web">
                     <div class="icon"><img src="assets/icon-web.png" alt="Web Development" loading="lazy"></div>
-                    <h3 data-translate="service1_title">Web Development</h3>
-                    <p data-translate="service1_description">Custom websites built with modern technologies to ensure
-                        performance and scalability.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon"><img src="assets/icon-mobile.png" alt="Mobile App Development" loading="lazy">
+                    <div class="bento-text-wrap">
+                        <h3 data-translate="service1_title">Web Development</h3>
+                        <p data-translate="service1_description">Custom websites built with modern technologies to ensure performance and scalability. We specialize in creating responsive, secure, and SEO-optimized web applications tailored to your specific business requirements. From corporate portals to complex e-commerce platforms, our full-stack solutions drive engagement and growth.</p>
                     </div>
-                    <h3 data-translate="service2_title">Mobile App Development</h3>
-                    <p data-translate="service2_description">Native and cross-platform mobile applications designed for
-                        seamless user experiences.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card service-card-premium bento-mobile">
+                    <div class="icon"><img src="assets/icon-mobile.png" alt="Mobile App Development" loading="lazy"></div>
+                    <div class="bento-text-wrap">
+                        <h3 data-translate="service2_title">Mobile App Development</h3>
+                        <p data-translate="service2_description">Native and cross-platform mobile applications designed for seamless user experiences. We build high-performance iOS and Android apps using modern frameworks. Our mobile solutions focus on intuitive UI design, robust backend integration, and rigorous testing to ensure your app dominates the app store charts and delights your users.</p>
+                    </div>
+                </div>
+                <div class="service-card service-card-premium bento-ui">
                     <div class="icon"><img src="assets/icon-design.png" alt="UI/UX Design" loading="lazy"></div>
-                    <h3 data-translate="service4_title">UI/UX Design</h3>
-                    <p data-translate="service4_description">User-centered design that creates engaging and intuitive
-                        digital products.</p>
+                    <div class="bento-text-wrap">
+                        <h3 data-translate="service4_title">UI/UX Design</h3>
+                        <p data-translate="service4_description">User-centered design that creates engaging and intuitive digital products.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="icon"><img src="assets/icon-digital-marketing.svg" alt="Digital Marketing"
-                            loading="lazy"></div>
-                    <h3 data-translate="service5_title">Digital Marketing</h3>
-                    <p data-translate="service5_description">Implementing intelligent marketing strategies to boost your
-                        online presence.</p>
-                    <a href="digital-marketing" class="btn btn-primary" style="margin-top: 65px; padding: 8px 24px; display: inline-block;">Know More</a>
+                <div class="service-card service-card-premium bento-digital">
+                    <div class="icon"><img src="assets/icon-digital-marketing.svg" alt="Digital Marketing" loading="lazy"></div>
+                    <div class="bento-text-wrap">
+                        <h3 data-translate="service5_title">Digital Marketing</h3>
+                        <p data-translate="service5_description">Implementing intelligent marketing strategies to boost your online presence.</p>
+                        <a href="digital-marketing.html" class="btn btn-primary" style="margin-top: 25px; padding: 8px 24px; display: inline-block;">Know More</a>
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card service-card-premium bento-ivr">
                     <div class="icon"><img src="assets/icon-ivr.svg" alt="IVR Solutions" loading="lazy"></div>
-                    <h3 data-translate="service6_title">IVR Solutions</h3>
-                    <p data-translate="service6_description">Advanced Interactive Voice Response systems to automate
-                        customer interactions and streamline call management.</p>
-                    <a href="/IVR_Webpage/" class="btn btn-primary" style="margin-top: 15px; padding: 8px 24px; display: inline-block;">Know More</a>
+                    <div class="bento-text-wrap">
+                        <h3 data-translate="service6_title">IVR Solutions</h3>
+                        <p data-translate="service6_description">Advanced Interactive Voice Response systems to automate customer interactions and streamline call management. Our intelligent IVR solutions reduce wait times, intelligently route calls to the right departments, and provide 24/7 self-service options. Enhance your customer support capabilities while significantly lowering operational costs and improving caller satisfaction.</p>
+                        <a href="/IVR_Webpage/" class="btn btn-primary" style="margin-top: 15px; padding: 8px 24px; display: inline-block;">Know More</a>
+                    </div>
                 </div>
-                <div class="service-card">
+                <div class="service-card service-card-premium bento-ai">
                     <div class="icon"><img src="assets/icon-gemini.svg" alt="AI Solutions" loading="lazy"></div>
-                    <h3 data-translate="service7_title">AI Solutions</h3>
-                    <p data-translate="service7_description">Cutting-edge artificial intelligence and machine learning
-                        solutions to automate processes and unlock data-driven insights.</p>
+                    <div class="bento-text-wrap">
+                        <h3 data-translate="service7_title">AI Solutions</h3>
+                        <p data-translate="service7_description">Cutting-edge artificial intelligence and machine learning solutions to automate processes, enhance decision-making, and unlock data-driven insights for your business.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -385,6 +389,44 @@
                             with a refined, strategic approach. Their expertise, professionalism, and attention to
                             detail significantly enhanced our brand presence. A truly dependable partner for businesses
                             seeking premium digital growth solutions."</p>
+                    </div>
+                </div>
+                
+                <div class="client-card">
+                    <div class="client-header">
+                        <div class="client-logo">
+                            <img src="assets/ar-hospital-logo.png.webp" alt="AR Hospital Logo" loading="lazy" style="object-fit: contain;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <span class="client-name">AR Hospital - Healing Hands</span>
+                            <span class="client-role">Administration</span>
+                        </div>
+                    </div>
+                    <div class="client-review">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Navabharath Technologies built an incredible hospital application and completely transformed our digital marketing strategy. Their seamless IT solutions have streamlined our patient operations and expanded our reach online. Highly recommended!"</p>
+                    </div>
+                </div>
+                
+                <div class="client-card">
+                    <div class="client-header">
+                        <div class="client-logo">
+                            <img src="assets/shettys-clinic-logo.png.png" alt="Shetty's Clinic Logo" loading="lazy" style="object-fit: contain;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <span class="client-name">Shetty's Hi-Tech Dental Clinic</span>
+                            <span class="client-role">Clinic Management</span>
+                        </div>
+                    </div>
+                    <div class="client-review">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Navabharath Technologies developed an exceptional dual-app queue management system for us—one dedicated app for our doctors and another for our patients. Their custom software has revolutionized our workflow, making patient visits incredibly smooth and efficient!"</p>
                     </div>
                 </div>
             </div>
@@ -446,6 +488,65 @@
                         <p data-translate="why_feature6_desc">Secure, scalable, and reliable infrastructure.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industries We Serve</h2>
+                <p>Delivering tailored digital solutions across multiple domains.</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>Healthcare</h4>
+                </div>
+                <div class="industry-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h4>E-commerce</h4>
+                </div>
+                <div class="industry-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Education</h4>
+                </div>
+                <div class="industry-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Finance</h4>
+                </div>
+                <div class="industry-card">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Manufacturing</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technologies We Use</h2>
+                <p>We leverage modern and powerful stacks to build scalable products.</p>
+            </div>
+            <div class="tech-flex">
+                <div class="tech-badge"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="tech-badge"><i class="fab fa-js-square"></i> TypeScript</div>
+                <div class="tech-badge"><i class="fab fa-java"></i> Java</div>
+                <div class="tech-badge"><i class="fab fa-php"></i> PHP</div>
+                <div class="tech-badge"><i class="fab fa-python"></i> Python</div>
+                <div class="tech-badge"><i class="fab fa-react"></i> React JS</div>
+                <div class="tech-badge"><i class="fab fa-angular"></i> Angular</div>
+                <div class="tech-badge"><i class="fab fa-node-js"></i> Node.js</div>
+                <div class="tech-badge"><i class="fab fa-aws"></i> AWS</div>
+                <div class="tech-badge"><i class="fab fa-microsoft"></i> Azure</div>
+                <div class="tech-badge"><i class="fab fa-docker"></i> Docker</div>
+                <div class="tech-badge"><i class="fas fa-database"></i> MongoDB</div>
+                <div class="tech-badge"><i class="fas fa-database"></i> SQL</div>
+                <div class="tech-badge"><i class="fab fa-git-alt"></i> Git</div>
+                <div class="tech-badge"><i class="fab fa-figma"></i> Figma</div>
             </div>
         </div>
     </section>
